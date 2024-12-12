@@ -110,6 +110,8 @@ header .logo {
 .section-one {
   background-color: #2e2f42;
   padding: 188px 0;
+  background-image: url(../images/people-office.jpg);
+  background-size: 1440px;
 }
 
 .main-title {
@@ -273,10 +275,6 @@ header {
 .list-address {
   display: flex;
   gap: 40px;
-}
-
-.section-one .container {
-  padding-bottom: 188px;
 }
 
 .list-sect-two {
