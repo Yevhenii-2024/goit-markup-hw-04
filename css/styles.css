@@ -84,6 +84,7 @@ header .logo {
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-list-item:hover,
@@ -102,6 +103,7 @@ header .logo {
   line-height: 1.5;
   letter-spacing: 0.02em;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-nav:hover,
 .address-nav:focus {
@@ -151,6 +153,7 @@ header .logo {
   height: 56px;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -326,8 +329,6 @@ li .cont-exp {
 
 .portfolio-list-item {
   min-width: calc((100% - 48px) / 3);
-  position: relative;
-  overflow: hidden;
 }
 
 .logo-block {
@@ -381,11 +382,6 @@ li .cont-exp {
   fill: #f4f4fd;
 }
 
-/* .img-container {
-  position: relative;
-  overflow: hidden;
-} */
-
 .text-overline {
   font-weight: 400;
   font-size: 16px;
@@ -395,19 +391,23 @@ li .cont-exp {
   padding-top: 40px;
   padding-left: 32px;
   position: absolute;
-  display: flex;
   top: 0;
   left: 0;
   width: 100%;
-  height: 300px;
+  height: 100%;
   background-color: #4d5ae5;
-  transform: translate(-100%, -100%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cont-overline {
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-list-item:hover .text-overline,
 .portfolio-list-item:focus .text-overline {
-  transform: translate(0);
+  transform: translateY(0);
 }
 
 .list-icon-footer {
@@ -447,4 +447,17 @@ li .cont-exp {
 .flex-footer {
   display: flex;
   column-gap: 120px;
+}
+
+.studio-content {
+  color: #404bbf;
+}
+
+.studio-content::after {
+  content: "";
+  display: flex;
+  border-radius: 2px;
+  width: 48px;
+  height: 4px;
+  background-color: #404bbf;
 }
