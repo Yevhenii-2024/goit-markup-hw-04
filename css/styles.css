@@ -472,10 +472,10 @@ li .cont-exp {
   content: "";
   display: inline-block;
   border-radius: 2px;
-  width: 48px;
   height: 4px;
   background-color: #404bbf;
   position: absolute;
   left: 0;
   bottom: -1px;
+  width: 100%;
 }
