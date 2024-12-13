@@ -60,6 +60,10 @@ img {
   margin: 0 auto;
 }
 
+.main-header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .logo {
   color: #4d5ae5;
   font-family: "Raleway", sans-serif;
@@ -113,14 +117,15 @@ header .logo {
 .section-one {
   background-color: #2e2f42;
   padding: 188px 0;
-  /* background-image: ; */
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/people-office.jpg);
-  background-size: 1440px;
+  max-width: 1440px;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-title {
@@ -306,8 +311,7 @@ header {
 }
 
 li .cont-exp {
-  padding-bottom: 32px;
-  margin-top: 32px;
+  padding: 32px 0;
 }
 
 .our-portfolio-list {
@@ -337,8 +341,16 @@ li .cont-exp {
   margin-right: 0;
 }
 
-.icon-link {
-  display: inline-block;
+.list-icon {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+}
+.cont-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   width: 264px;
@@ -347,22 +359,10 @@ li .cont-exp {
   margin-bottom: 8px;
 }
 
-.icon-position {
-  position: relative;
-  top: 24px;
-  left: 100px;
-}
-
-.list-icon {
-  display: flex;
-  justify-content: center;
-  column-gap: 24px;
-  padding: 0 16px;
-  margin-top: 8px;
-}
-
 .link-icon-soc {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
@@ -376,9 +376,9 @@ li .cont-exp {
 }
 
 .icon-soc {
-  position: relative;
+  /* position: relative;
   top: 12px;
-  left: 12px;
+  left: 12px; */
   fill: #f4f4fd;
 }
 
@@ -388,8 +388,7 @@ li .cont-exp {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  padding-top: 40px;
-  padding-left: 32px;
+  padding: 40px 32px;
   position: absolute;
   top: 0;
   left: 0;
@@ -422,11 +421,13 @@ li .cont-exp {
 
 .list-icon-footer {
   display: flex;
-  column-gap: 16px;
+  gap: 16px;
   margin-top: 16px;
 }
 .link-soc-footer {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   background-color: #4d5ae5;
@@ -440,10 +441,13 @@ li .cont-exp {
 }
 
 .icon-soc-footer {
-  position: relative;
+  /* position: relative;
   top: 8px;
-  left: 8px;
+  left: 8px; */
   fill: #f4f4fd;
+}
+.cont-footer {
+  margin-right: 120px;
 }
 
 .footer-title {
@@ -456,18 +460,22 @@ li .cont-exp {
 
 .flex-footer {
   display: flex;
-  column-gap: 120px;
+  align-items: baseline;
 }
 
 .studio-content {
   color: #404bbf;
+  position: relative;
 }
 
 .studio-content::after {
   content: "";
-  display: flex;
+  display: inline-block;
   border-radius: 2px;
   width: 48px;
   height: 4px;
   background-color: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
 }
