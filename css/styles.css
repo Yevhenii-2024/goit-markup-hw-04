@@ -422,7 +422,6 @@ li .cont-exp {
 .list-icon-footer {
   display: flex;
   gap: 16px;
-  margin-top: 16px;
 }
 .link-soc-footer {
   display: flex;
@@ -456,6 +455,7 @@ li .cont-exp {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .flex-footer {
